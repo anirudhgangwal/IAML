@@ -1,0 +1,17 @@
+digraph Tree {
+node [shape=box, style="filled, rounded", color="black", fontname=helvetica] ;
+edge [fontname=helvetica] ;
+0 [label=<CheckingAccount &le; 1.5<br/>entropy = 0.888<br/>samples = 900<br/>value = [275, 625]<br/>class = bad>, fillcolor="#399de58f"] ;
+1 [label=<Duration &le; 22.5<br/>entropy = 0.994<br/>samples = 485<br/>value = [220, 265]<br/>class = bad>, fillcolor="#399de52b"] ;
+0 -> 1 [labeldistance=2.5, labelangle=45, headlabel="True"] ;
+2 [label=<entropy = 0.941<br/>samples = 274<br/>value = [98, 176]<br/>class = bad>, fillcolor="#399de571"] ;
+1 -> 2 ;
+3 [label=<entropy = 0.982<br/>samples = 211<br/>value = [122, 89]<br/>class = good>, fillcolor="#e5813945"] ;
+1 -> 3 ;
+4 [label=<OtherPlans &le; 0.5<br/>entropy = 0.564<br/>samples = 415<br/>value = [55, 360]<br/>class = bad>, fillcolor="#399de5d8"] ;
+0 -> 4 [labeldistance=2.5, labelangle=-45, headlabel="False"] ;
+5 [label=<entropy = 0.911<br/>samples = 49<br/>value = [16, 33]<br/>class = bad>, fillcolor="#399de583"] ;
+4 -> 5 ;
+6 [label=<entropy = 0.489<br/>samples = 366<br/>value = [39, 327]<br/>class = bad>, fillcolor="#399de5e1"] ;
+4 -> 6 ;
+}
